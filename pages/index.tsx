@@ -39,13 +39,14 @@ export default function Home() {
         <div className="bg-[#EFBCBF] py-12 px-4">
           <div className="mx-auto max-w-xl text-center text-lg font-medium leading-snug text-[#BA4A4A]">
             <p className="mb-8">
-              Join us for birthday + housewarming shenanigans. We're combining
+              Join us for birthday + housewarming shenanigans. We are combining
               two of our favourite things: Sunsets and Prosecco!🌅🍾{" "}
             </p>
             <p>
-              To set the mood, we're going for a Sunset Chic dress code. Think
-              flowy fabrics in warm sunset hues like burnt orange, dusty pink,
-              and golden yellow. Lets create a picture-perfect scene together! 🎞
+              To set the mood, we&lsquo;re going for a Sunset Chic dress code.
+              Think flowy fabrics in warm sunset hues like burnt orange, dusty
+              pink, and golden yellow. Lets create a picture-perfect scene
+              together! 🎞
             </p>
           </div>
         </div>
