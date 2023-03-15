@@ -16,12 +16,10 @@ export default function Home() {
           <div className="absolute top-0 left-0 z-[1] h-full w-full bg-slate-400">
             <video
               className="h-full w-full object-cover "
-              autoplay="autoplay"
               playsInline
               preload="auto"
               autoPlay
               muted
-              defaultMuted
               loop
             >
               <source src="/sunsets.mp4" type="video/mp4" />
