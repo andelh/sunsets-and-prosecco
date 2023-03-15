@@ -11,7 +11,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="text-black">
         <div className="relative flex h-[90vh] items-center justify-center text-center text-white">
           <div className="absolute top-0 left-0 z-[1] h-full w-full bg-slate-400">
             <video
