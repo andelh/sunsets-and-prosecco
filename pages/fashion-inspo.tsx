@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel } from "@mantine/carousel";
 import Image from "next/image";
 import { useMediaQuery } from "@mantine/hooks";
+import Link from "next/link";
 
 type Props = {};
 
@@ -9,7 +10,10 @@ export default function FashionInspo({}: Props) {
   const matches = useMediaQuery("(max-width: 768px)");
   return (
     <div className="min-h-screen bg-yellow">
-      <div className="flex flex-col items-center px-4 py-20 text-center">
+      <nav className="sticky top-0 flex w-full items-center justify-center py-4 font-semibold underline">
+        <Link href="/">HOME</Link>
+      </nav>
+      <div className="flex flex-col items-center px-4 py-12 text-center">
         <h1 className="mb-4 text-6xl font-bold">Fashion Inspo</h1>
         <p className="text-medium mb-8 text-lg">
           It’s just colours from the sunset 😳

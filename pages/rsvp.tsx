@@ -5,6 +5,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 import { firestore } from "../firebase";
 import { toast } from "sonner";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 type Props = {};
 
@@ -74,7 +75,10 @@ export default function RSVP({}: Props) {
   };
   return (
     <div className="min-h-screen bg-yellow">
-      <div className="mx-auto flex max-w-md flex-col items-center px-4 py-20 text-center">
+      <nav className="sticky top-0 flex w-full items-center justify-center py-4 font-semibold underline">
+        <Link href="/">HOME</Link>
+      </nav>
+      <div className="mx-auto flex max-w-md flex-col items-center px-4 py-12 text-center">
         <h1 className="mb-4 text-6xl font-bold">RSVP</h1>
         <p className="text-medium mb-8 max-w-md text-lg">
           All we ask is that you bring one bottle of Prosecco on entry and your
@@ -91,6 +95,7 @@ export default function RSVP({}: Props) {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
             <input
               className="mb-8 w-full rounded-md border-2 border-black bg-transparent py-2 px-4 text-lg text-black placeholder-zinc-800 focus:border-black"
@@ -98,6 +103,7 @@ export default function RSVP({}: Props) {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <Button type="submit" title="Submit RSVP" />
           </form>
@@ -128,7 +134,7 @@ export default function RSVP({}: Props) {
   );
 }
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends React.ButtonHTMLAttributes<MotionB> {
   title: string;
 }
 
@@ -136,19 +142,17 @@ const Button = (props: ButtonProps) => {
   return (
     <div className="relative w-52">
       <button
-        className="absolute top-2 left-2 z-[-1]  w-full whitespace-nowrap rounded-lg border-4 border-[#0F0F0F] bg-[#0F0F0F] px-8 py-4 text-center text-xs font-bold uppercase"
-        disabled
-      >
-        {props.title}
-      </button>
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
         className="text-md z-0 w-52 whitespace-nowrap rounded-lg border-4 border-black bg-orange px-8 py-4 text-center font-bold uppercase text-black"
         {...props}
       >
         {props.title}
-      </motion.button>
+      </button>
+      <button
+        className="absolute top-2 left-2 z-[-1] w-full whitespace-nowrap rounded-lg border-4 border-[#0F0F0F] bg-[#0F0F0F] px-8 py-4 text-center text-xs font-bold uppercase"
+        disabled
+      >
+        {props.title}
+      </button>
     </div>
   );
 };

@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="text-black">
-        <div className="relative flex h-[80vh] items-center justify-center text-center text-orange">
+        <div className="relative flex h-[85vh] items-center justify-center text-center text-orange">
           <div className="absolute top-0 left-0 z-[1] h-full w-full bg-slate-400">
             <video
               className="h-full w-full object-cover "
@@ -30,15 +30,17 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, scale: 0.88 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 2 }}
+            transition={{ delay: 0.4, duration: 3 }}
             className="z-10 mix-blend-screen"
           >
             <h1
-              className={`${panchang.className} text-3xl uppercase leading-none`}
+              className={`${panchang.className} text-3xl uppercase leading-none md:text-6xl`}
             >
               Sunsets &
             </h1>
-            <h1 className="font-serif text-8xl leading-[0.4]">prosecco</h1>
+            <h1 className="font-serif text-8xl leading-[0.4] md:text-[180px] md:leading-[0.2]">
+              prosecco
+            </h1>
           </motion.div>
         </div>
         <div className="bg-[#FB9962] py-12 px-4">
