@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import { panchang } from "./_app";
 
 export default function Home() {
@@ -12,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="text-black">
-        <div className="relative flex h-[90vh] items-center justify-center text-center text-white">
+        <div className="relative flex h-[80vh] items-center justify-center text-center text-orange">
           <div className="absolute top-0 left-0 z-[1] h-full w-full bg-slate-400">
             <video
               className="h-full w-full object-cover "
@@ -22,38 +24,61 @@ export default function Home() {
               muted
               loop
             >
-              <source src="/sunsets.mp4" type="video/mp4" />
+              <source src="/sunset1.mp4" type="video/mp4" />
             </video>
           </div>
-          <div className="z-10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.88 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 2 }}
+            className="z-10 mix-blend-screen"
+          >
             <h1
-              className={`${panchang.className} ml-24 text-3xl uppercase leading-none`}
+              className={`${panchang.className} text-3xl uppercase leading-none`}
             >
               Sunsets &
             </h1>
-            <h1 className="font-serif text-8xl leading-none">Prosecco</h1>
-          </div>
+            <h1 className="font-serif text-8xl leading-[0.4]">prosecco</h1>
+          </motion.div>
         </div>
-        <div className="bg-[#EFBCBF] py-12 px-4">
-          <div className="mx-auto max-w-xl text-center text-lg font-medium leading-snug text-[#BA4A4A]">
-            <p className="mb-8">
+        <div className="bg-[#FB9962] py-12 px-4">
+          <div className="mx-auto max-w-xl text-center text-lg font-medium leading-snug text-[#7D2C2C]">
+            <p className="mb-6 text-4xl">🌅 🍾</p>
+            <p className="mb-6">
               Join us for birthday + housewarming shenanigans. We are combining
-              two of our favourite things: Sunsets and Prosecco!🌅🍾{" "}
+              two of our favourite things: Sunsets and Prosecco!
             </p>
-            <p>
+            <p className="mb-6">
               To set the mood, we&lsquo;re going for a Sunset Chic dress code.
               Think flowy fabrics in warm sunset hues like burnt orange, dusty
               pink, and golden yellow. Lets create a picture-perfect scene
-              together! 🎞
+              together!
             </p>
+            <p className="mb-6 text-4xl">🎞</p>
           </div>
         </div>
         <div className="py-12 px-4">
-          <div className="mx-auto grid max-w-xl grid-cols-2 gap-4">
-            <Button title="RSVP Now" />
-            <Button title="Fashion Inspo" />
-            <Button title="Get Directions" />
-            <Button title="Add to Playlist" />
+          <div className="mx-auto grid max-w-xl grid-cols-2 gap-3">
+            <Link href="/rsvp">
+              <Button title="RSVP Now" />
+            </Link>
+            <Link href="/fashion-inspo">
+              <Button title="Fashion Inspo" />
+            </Link>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.waze.com/live-map/directions?navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location&to=ll.10.68032396%2C-61.50414705"
+            >
+              <Button title="Get Directions" />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://open.spotify.com/playlist/5kLOPnSX3J0n8sauEnZaqX?si=t-sPtd45Qp203NeCCfk-kA&pt=76f22d7c651aa8c1cce1228663c8b3a0"
+            >
+              <Button title="Add to Playlist" />
+            </a>
           </div>
           <div className="mx-auto grid max-w-xl grid-cols-2 gap-y-8 gap-x-2 py-12 text-center">
             <div className="flex flex-col items-center justify-start">

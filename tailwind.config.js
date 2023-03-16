@@ -16,6 +16,10 @@ module.exports = {
         sans: ["var(--font-pally)", ...fontFamily.sans],
         serif: ["var(--font-dancing)", ...fontFamily.serif],
       },
+      colors: {
+        yellow: "#F5E8C6",
+        orange: "#FB9062",
+      },
     },
   },
   plugins: [],
