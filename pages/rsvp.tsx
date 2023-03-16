@@ -134,7 +134,7 @@ export default function RSVP({}: Props) {
   );
 }
 
-interface ButtonProps extends React.ButtonHTMLAttributes<MotionB> {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
 }
 
