@@ -148,7 +148,7 @@ const Button = (props: ButtonProps) => {
         {props.title}
       </button>
       <button
-        className="absolute top-2 left-2 z-[-1] w-full whitespace-nowrap rounded-lg border-4 border-[#0F0F0F] bg-[#0F0F0F] px-8 py-4 text-center text-xs font-bold uppercase"
+        className="text-md absolute top-2 left-2 z-[-1] w-full whitespace-nowrap rounded-lg border-4 border-[#0F0F0F] bg-[#0F0F0F] px-8 py-4 text-center font-bold uppercase"
         disabled
       >
         {props.title}
